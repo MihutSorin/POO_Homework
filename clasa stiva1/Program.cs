@@ -10,6 +10,12 @@ namespace clasa_stiva1
     {
         static void Main(string[] args)
         {
+            Stiva stiva = new Stiva();
+             stiva.Push(1234);
+                int numar = (int)stiva.Pop();
+                Console.WriteLine(numar);
+                Console.ReadLine();
+
         }
     }
 }
