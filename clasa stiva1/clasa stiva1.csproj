@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5F553755-741F-4E8D-9482-C40F1527D957}</ProjectGuid>
+    <ProjectGuid>{A4878385-2F14-40F4-985E-A284E4279DC5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Names</RootNamespace>
-    <AssemblyName>Names</AssemblyName>
+    <RootNamespace>clasa_stiva1</RootNamespace>
+    <AssemblyName>clasa stiva1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Names.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
