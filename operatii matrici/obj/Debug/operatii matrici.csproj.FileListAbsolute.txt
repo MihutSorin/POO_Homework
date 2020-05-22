@@ -1,0 +1,7 @@
+E:\programe de inceput\operatii matrici\bin\Debug\operatii matrici.exe.config
+E:\programe de inceput\operatii matrici\bin\Debug\operatii matrici.exe
+E:\programe de inceput\operatii matrici\bin\Debug\operatii matrici.pdb
+E:\programe de inceput\operatii matrici\obj\Debug\operatii matrici.csprojAssemblyReference.cache
+E:\programe de inceput\operatii matrici\obj\Debug\operatii matrici.csproj.CoreCompileInputs.cache
+E:\programe de inceput\operatii matrici\obj\Debug\operatii matrici.exe
+E:\programe de inceput\operatii matrici\obj\Debug\operatii matrici.pdb
