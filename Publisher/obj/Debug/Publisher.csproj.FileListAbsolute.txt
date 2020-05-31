@@ -1,0 +1,7 @@
+E:\POO_Homework\Publisher\bin\Debug\Publisher.exe.config
+E:\POO_Homework\Publisher\bin\Debug\Publisher.exe
+E:\POO_Homework\Publisher\bin\Debug\Publisher.pdb
+E:\POO_Homework\Publisher\obj\Debug\Publisher.csprojAssemblyReference.cache
+E:\POO_Homework\Publisher\obj\Debug\Publisher.csproj.CoreCompileInputs.cache
+E:\POO_Homework\Publisher\obj\Debug\Publisher.exe
+E:\POO_Homework\Publisher\obj\Debug\Publisher.pdb
