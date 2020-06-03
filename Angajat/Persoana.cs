@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Angajat
 {
-    class Persoana
+    public class Persoana
     {
+        protected string nume;
+        protected string prenume;
+        public Persoana(string nm, string pnm)
+        {
+            nume = nm;
+            prenume = pnm;
+        }
+
     }
 }
