@@ -8,12 +8,16 @@ namespace Angajat
 {
     public class Persoana
     {
-        protected string nume;
-        protected string prenume;
+        public string nume;
+        public string prenume;
         public Persoana(string nm, string pnm)
         {
             nume = nm;
             prenume = pnm;
+        }
+        public Persoana()
+        {
+                
         }
 
     }
