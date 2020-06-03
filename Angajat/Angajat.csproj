@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBase.txt" />
+    <Content Include="Databaseinfo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
