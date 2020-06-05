@@ -9,22 +9,31 @@ namespace Angajat
 {
     class Program
     {
-        public static List<Angajat> _angajat = new List<Angajat>();
+        public static List<Angajat> _angajati = new List<Angajat>();
         static void Main(string[] args)
         {
-          //  _angajat = new List<Angajat>();
-
-            //TextReader dataLoad = new StreamReader(@"E:\POO_Homework\Angajat\DataBase.txt");
-            //string buffer = dataLoad.ReadToEnd();
-            //Console.WriteLine(buffer);
-            string filepath = @"E:\POO_Homework\Angajat\DataBase.txt";
-            List<string> lines = File.ReadAllLines(filepath).ToList();
-            foreach (string line in lines)
-            {
-                Console.WriteLine(line);
-            }
-            File.WriteAllLines(filepath, lines);
+           
+            Load(@"..\..\DataBase.txt");
+            view();
             Console.ReadKey();
         }
+        static void Load(string filename)
+        {
+            TextReader dataload = new StreamReader(filename);
+            int n = int.Parse(dataload.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                _angajati.Add(new Angajat(dataload.ReadLine()));
+            }
+        }
+        static void view()
+        {
+            foreach (Angajat ang in _angajati)
+            {
+                Console.WriteLine(ang.ToString());
+            }
+        }
+       
     }
 }

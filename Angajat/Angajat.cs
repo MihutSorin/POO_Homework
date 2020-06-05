@@ -12,7 +12,10 @@ namespace Angajat
         private int anulAngajarii;
         public const int nr_max = 10; 
         public static int nr_angajati = 0; 
-        public static Angajat[] angajati = new Angajat[nr_max]; 
+        public static Angajat[] angajati = new Angajat[nr_max];
+        private string v;
+        private string[] date;
+
         public static void adaug_angajat(Angajat a) 
         {
             angajati[nr_angajati++] = a;
@@ -27,6 +30,20 @@ namespace Angajat
         public Angajat()
         {
 
+        }
+
+        public Angajat(string nm, string pnm, string v, string[] date) : base(nm, pnm)
+        {
+            this.v = v;
+            this.date = date;
+        }
+
+        public Angajat(string data)
+        {
+            string[] tmp = data.Split(',');
+            this.nume = tmp[0];
+            this.prenume = tmp[1];
+            this.anulAngajarii = int.Parse(tmp[2]);
         }
 
         public override string ToString()
