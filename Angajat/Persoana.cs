@@ -10,15 +10,14 @@ namespace Angajat
     {
         public string nume;
         public string prenume;
-        public Persoana(string nm, string pnm)
+        public DateTime data;
+        public Persoana(string nm, string pnm,DateTime data)
         {
-            nume = nm;
-            prenume = pnm;
+            this.nume = nm;
+            this.prenume = pnm;
+            this.data = data;
         }
-        public Persoana()
-        {
-                
-        }
+       
 
     }
 }
