@@ -54,6 +54,7 @@
   <ItemGroup>
     <Content Include="DataBase.txt" />
     <Content Include="Databaseinfo.txt" />
+    <Content Include="DBVechime.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
