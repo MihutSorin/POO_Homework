@@ -7,48 +7,61 @@ using System.Threading.Tasks;
 
 namespace Angajat
 {
-    public class Angajat:Persoana
+    public class Angajati<T>
     {
-        private int anulAngajarii;
-        public const int nr_max = 10; 
-        public static int nr_angajati = 0; 
-        public static Angajat[] angajati = new Angajat[nr_max];
-        private string v;
-        private string[] date;
-
-        public static void adaug_angajat(Angajat a) 
-        {
-            angajati[nr_angajati++] = a;
-            if (nr_angajati == nr_max)
-                throw new Exception("Prea multi angajati");
-        }
-        public Angajat(string nm, string pnm, int anang): base(nm, pnm)
-        {
-            this.anulAngajarii = anang;
-        }
-
-        public Angajat()
+        public List<Persoana> list = new List<Persoana>();
+        public Angajati()
         {
 
         }
-
-        public Angajat(string nm, string pnm, string v, string[] date) : base(nm, pnm)
+        public Angajati(Persoana angajat)
         {
-            this.v = v;
-            this.date = date;
+            this.list.Add(angajat);
+        }
+        public void Add(Persoana angajat)
+        {
+            this.list.Add(angajat);
         }
 
-        public Angajat(string data)
+        public void Remove(Persoana angajat)
         {
-            string[] tmp = data.Split(',');
-            this.nume = tmp[0];
-            this.prenume = tmp[1];
-            this.anulAngajarii = int.Parse(tmp[2]);
+            this.list.Remove(angajat);
         }
-
-        public override string ToString()
+        public void SortByName()
         {
-            return "angajatul:"+nume+" "+prenume+" "+ anulAngajarii.ToString();
+            IComparer<Persoana> myComparer = new SortAlphabetically();
+            this.list.Sort(myComparer);
+        }
+        public void Vechime()
+        {
+            IComparer<Persoana> myComparer = new SortByVechime();
+            this.list.Sort(myComparer);
+        }
+    }
+
+    internal class SortByVechime : IComparer<Persoana>
+    {
+        public int Compare(Persoana x, Persoana y)
+        {
+            int anulAngajarii = x.data.Year.CompareTo(y.data.Year);
+            if (anulAngajarii == 0)
+            {
+                return x.data.Month.CompareTo(y.data.Month);
+            }
+            return anulAngajarii;
+        }
+    }
+
+    internal class SortAlphabetically : IComparer<Persoana>
+    {
+        public int Compare(Persoana x, Persoana y)
+        {
+            int nume = x.nume.CompareTo(y.nume);
+            if (nume == 0)
+            {
+                return x.prenume.CompareTo(y.prenume);
+            }
+            return nume;
         }
     }
 }
